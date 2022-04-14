@@ -15,10 +15,10 @@ Variables
   --clr-primary-5: hsl(162, 73%, 46%);
 
   /* lighter shades of primary color  */
-  --clr-primary-6: rgba(26, 161, 121, 1);
-  --clr-primary-7: rgba(19, 121, 91, 1);
-  --clr-primary-8: rgba(13, 80, 60, 1);
-  --clr-primary-9: rgba(6, 40, 30, 1);
+  --clr-primary-6: #1aa179;
+  --clr-primary-7: #13795b;
+  --clr-primary-8: #0d503c;
+  --clr-primary-9: #06281e;
 
   /* darkest grey - used for headings */
   --clr-grey-1: hsl(212, 33%, 89%);
@@ -32,12 +32,12 @@ Variables
   --clr-grey-7: hsl(209, 34%, 30%);
   --clr-grey-8: hsl(211, 39%, 23%);
   --clr-grey-9: hsl(209, 61%, 16%);
-  --clr-white: rgba(255, 255, 255, 1);
+  --clr-white: #fff;
   --clr-red-dark: hsl(360, 67%, 44%);
   --clr-red-light: hsl(360, 71%, 66%);
   --clr-green-dark: hsl(125, 67%, 44%);
   --clr-green-light: hsl(125, 71%, 66%);
-  --clr-black: rgba(34, 34, 34, 1);
+  --clr-black: #222;
   --transition: all 0.3s linear;
   --spacing: 0.1rem;
   --radius: 0.25rem;
@@ -45,8 +45,7 @@ Variables
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
   --max-width: 1170px;
   --fixed-width: 450px;
-  --clr-pink-dark: rgba(242, 138, 178, 1);
-  --clr-pink-light: rgba(242, 138, 178, 0.8);
+  --clr-pink: #f28ab2;
 }
 
 /*
@@ -65,7 +64,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
-  background: var(--clr-pink-dark);
+  background: var(--clr-pink);
   color: var(--clr-grey-9);
   line-height: 1.5;
   font-size: 0.875rem;
@@ -152,7 +151,7 @@ main {
 }
 .container button {
   color: var(--clr-white);
-  background: var(--clr-pink-dark);
+  background: var(--clr-pink);
   display: block;
   width: 100%;
   border-color: transparent;
@@ -162,26 +161,5 @@ main {
   font-size: 1.2rem;
   letter-spacing: var(--spacing);
   border-radius: var(--radius);
-  outline: 1px solid var(--clr-pink-light);
-  cursor: pointer;
-}
-.person {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  column-gap: 0.75rem;
-  margin-bottom: 1.5rem;
-  align-items: center;
-}
-.person img {
-  width: 75px;
-  height: 75px;
-  object-fit: cover;
-  border-radius: 50%;
-  box-shadow: var(--light-shadow);
-}
-.person h4 {
-  margin-bottom: 0.35rem;
-}
-.person p {
-  margin-bottom: 0;
+  outline: 1px solid;
 }

@@ -32,12 +32,12 @@ Variables
   --clr-grey-7: hsl(209, 34%, 30%);
   --clr-grey-8: hsl(211, 39%, 23%);
   --clr-grey-9: hsl(209, 61%, 16%);
-  --clr-white: rgba(255, 255, 255, 1);
+  --clr-white: rgb(255, 255, 255);
   --clr-red-dark: hsl(360, 67%, 44%);
   --clr-red-light: hsl(360, 71%, 66%);
   --clr-green-dark: hsl(125, 67%, 44%);
   --clr-green-light: hsl(125, 71%, 66%);
-  --clr-black: rgba(34, 34, 34, 1);
+  --clr-black: #222;
   --transition: all 0.3s linear;
   --spacing: 0.1rem;
   --radius: 0.25rem;
@@ -164,24 +164,4 @@ main {
   border-radius: var(--radius);
   outline: 1px solid var(--clr-pink-light);
   cursor: pointer;
-}
-.person {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  column-gap: 0.75rem;
-  margin-bottom: 1.5rem;
-  align-items: center;
-}
-.person img {
-  width: 75px;
-  height: 75px;
-  object-fit: cover;
-  border-radius: 50%;
-  box-shadow: var(--light-shadow);
-}
-.person h4 {
-  margin-bottom: 0.35rem;
-}
-.person p {
-  margin-bottom: 0;
 }

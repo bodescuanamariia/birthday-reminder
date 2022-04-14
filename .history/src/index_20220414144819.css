@@ -176,12 +176,4 @@ main {
   width: 75px;
   height: 75px;
   object-fit: cover;
-  border-radius: 50%;
-  box-shadow: var(--light-shadow);
-}
-.person h4 {
-  margin-bottom: 0.35rem;
-}
-.person p {
-  margin-bottom: 0;
 }
