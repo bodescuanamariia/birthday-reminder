@@ -1,0 +1,30 @@
+:root {
+  /* dark shades of primary color  */
+  --clr-primary-1: hsl(162, 61%, 89%);
+  --clr-primary-2: hsl(162, 61%, 78%);
+  --clr-primary-3: hsl(162, 61%, 67%);
+  --clr-primary-4: hsl(162, 61%, 57%);
+
+  /* primary main color  */
+  --clr-primary-5: hsl(162, 73%, 46%);
+
+  /* lighter shades of primary color  */
+  --clr-primary-6: #1aa179;
+  --clr-primary-7: #13795b;
+  --clr-primary-8: #0d503c;
+  --clr-primary-9: #06281e;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
