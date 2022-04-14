@@ -5,19 +5,12 @@ import data from "./data";
 
 function App() {
   const [people, setPeople] = useState(data);
-  const today = new Date();
 
   return (
     <main>
       <article>
         <section className="container">
-          <h2 id="heading">
-            {today.toLocaleString("en-US", {
-              year: "numeric",
-              month: "long",
-              day: "numeric",
-            })}
-          </h2>
+          <h2 id="heading">Data de azi</h2>
         </section>
         <section className="container">
           <h3>Birthdays today</h3>

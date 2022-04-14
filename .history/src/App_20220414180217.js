@@ -11,13 +11,7 @@ function App() {
     <main>
       <article>
         <section className="container">
-          <h2 id="heading">
-            {today.toLocaleString("en-US", {
-              year: "numeric",
-              month: "long",
-              day: "numeric",
-            })}
-          </h2>
+          <h2 id="heading">{today}</h2>
         </section>
         <section className="container">
           <h3>Birthdays today</h3>

@@ -6,6 +6,7 @@ import data from "./data";
 function App() {
   const [people, setPeople] = useState(data);
   const today = new Date();
+  console.log(today);
 
   return (
     <main>

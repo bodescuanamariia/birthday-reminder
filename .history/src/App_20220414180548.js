@@ -6,6 +6,7 @@ import data from "./data";
 function App() {
   const [people, setPeople] = useState(data);
   const today = new Date();
+  console.log(today);
 
   return (
     <main>
@@ -13,6 +14,7 @@ function App() {
         <section className="container">
           <h2 id="heading">
             {today.toLocaleString("en-US", {
+              weekday: "long",
               year: "numeric",
               month: "long",
               day: "numeric",

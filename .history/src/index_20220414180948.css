@@ -138,11 +138,8 @@ main {
 }
 #heading {
   text-align: center;
-  font-weight: 600;
-  color: var(--clr-pink-dark);
-}
-#heading h2 {
-  margin-bottom: 0;
+  font-weight: 300;
+  color: var(--clr-black);
 }
 .container {
   width: 90vw;
