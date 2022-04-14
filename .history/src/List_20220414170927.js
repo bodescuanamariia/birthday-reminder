@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 
 const List = ({ people }) => {
+  const [celebratedPeople, setCelebratedPeople] = useState([]);
   const today = new Date();
 
   const getAge = (dateOfBirth) => {
@@ -20,9 +21,27 @@ const List = ({ people }) => {
     return formattedDate;
   };
 
+  //   var todayDate = [];
+  //   todayDate = people.filter((person, id) => {
+  //     const { dateOfBirth } = person;
+  //     const date = stringToDate(dateOfBirth);
+  //     return (
+  //       today.getDate() === date.getDate() && today.getMonth() === date.getMonth()
+  //     );
+  //   });
+
+  celebratedPeople = people.filter((person, id) => {
+    const { dateOfBirth } = person;
+    const date = stringToDate(dateOfBirth);
+    return (
+      today.getDate() === date.getDate() && today.getMonth() === date.getMonth()
+    );
+  });
+  setCelebratedPeople(celebratedPeople);
+
   return (
     <>
-      {people.map((person) => {
+      {celebratedPeople.map((person) => {
         const { id, name, dateOfBirth, image } = person;
         const age = getAge(stringToDate(dateOfBirth));
         const formattedDateOfBirth = formatDate(stringToDate(dateOfBirth));

@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 
-const List = ({ people }) => {
+const FilteredList = ({ people, length }) => {
   const today = new Date();
 
   const getAge = (dateOfBirth) => {
@@ -20,9 +20,20 @@ const List = ({ people }) => {
     return formattedDate;
   };
 
+  var todayBirthdays = [];
+  todayBirthdays = people.filter((person, id) => {
+    const { dateOfBirth } = person;
+    const date = stringToDate(dateOfBirth);
+    return (
+      today.getDate() === date.getDate() && today.getMonth() === date.getMonth()
+    );
+  });
+
+  length = todayBirthdays.length;
+
   return (
     <>
-      {people.map((person) => {
+      {todayBirthdays.map((person) => {
         const { id, name, dateOfBirth, image } = person;
         const age = getAge(stringToDate(dateOfBirth));
         const formattedDateOfBirth = formatDate(stringToDate(dateOfBirth));
@@ -36,6 +47,7 @@ const List = ({ people }) => {
                 {formattedDateOfBirth} - {age} years
               </p>
             </div>
+            {length}
           </article>
         );
       })}
@@ -43,4 +55,4 @@ const List = ({ people }) => {
   );
 };
 
-export default List;
+export default FilteredList;

@@ -1,9 +1,8 @@
 import React from "react";
 
 const List = ({ people }) => {
-  const today = new Date();
-
   const getAge = (dateOfBirth) => {
+    const today = new Date();
     const age = today.getFullYear() - dateOfBirth.getFullYear();
     return age;
   };
@@ -19,6 +18,14 @@ const List = ({ people }) => {
     });
     return formattedDate;
   };
+  const checkBirthday = (date) => {
+    const today = new Date();
+    if (today === date) {
+      console.log("yes");
+    } else {
+      console.log("no");
+    }
+  };
 
   return (
     <>
@@ -26,7 +33,7 @@ const List = ({ people }) => {
         const { id, name, dateOfBirth, image } = person;
         const age = getAge(stringToDate(dateOfBirth));
         const formattedDateOfBirth = formatDate(stringToDate(dateOfBirth));
-
+        console.log(checkBirthday(stringToDate(dateOfBirth)));
         return (
           <article key={id} className="person">
             <img src={image} alt={name} />

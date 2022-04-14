@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 const List = ({ people }) => {
   const today = new Date();
@@ -20,9 +20,18 @@ const List = ({ people }) => {
     return formattedDate;
   };
 
+  var todayDate = [];
+  todayDate = people.filter((person, id) => {
+    const { dateOfBirth } = person;
+    const date = stringToDate(dateOfBirth);
+    return (
+      today.getDate() === date.getDate() && today.getMonth() === date.getMonth()
+    );
+  });
+
   return (
     <>
-      {people.map((person) => {
+      {todayDate.map((person) => {
         const { id, name, dateOfBirth, image } = person;
         const age = getAge(stringToDate(dateOfBirth));
         const formattedDateOfBirth = formatDate(stringToDate(dateOfBirth));
