@@ -11,28 +11,26 @@ const List = ({ people }) => {
     return date;
   };
   const formatDate = (date) => {
-    const formattedDate = date.toLocaleDateString("en-us", {
+    new Date().toLocaleDateString("en-us", {
+      weekday: "long",
       year: "numeric",
       month: "short",
       day: "numeric",
     });
-    return formattedDate;
   };
 
   return (
     <>
       {people.map((person) => {
         const { id, name, dateOfBirth, image } = person;
-        const age = getAge(stringToDate(dateOfBirth));
-        const formattedDateOfBirth = formatDate(stringToDate(dateOfBirth));
+        console.log(stringToDate(dateOfBirth));
         return (
           <article key={id} className="person">
             <img src={image} alt={name} />
             <div>
               <h4>{name}</h4>
-              <p>
-                {formattedDateOfBirth} - {age} years
-              </p>
+              <p>{dateOfBirth}</p>
+              {/* <p>c- {getAge(dateOfBirth)} years</p> */}
             </div>
           </article>
         );

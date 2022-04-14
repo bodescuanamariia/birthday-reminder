@@ -24,14 +24,14 @@ const List = ({ people }) => {
       {people.map((person) => {
         const { id, name, dateOfBirth, image } = person;
         const age = getAge(stringToDate(dateOfBirth));
-        const formattedDateOfBirth = formatDate(stringToDate(dateOfBirth));
+        const dateOfBirthFormat = formatDate(stringToDate(dateOfBirth));
         return (
           <article key={id} className="person">
             <img src={image} alt={name} />
             <div>
               <h4>{name}</h4>
               <p>
-                {formattedDateOfBirth} - {age} years
+                {dateOfBirthFormat} - {age} years
               </p>
             </div>
           </article>

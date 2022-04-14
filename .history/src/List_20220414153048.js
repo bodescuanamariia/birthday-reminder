@@ -6,32 +6,28 @@ const List = ({ people }) => {
     const age = today.getFullYear() - dateOfBirth.getFullYear();
     return age;
   };
-  const stringToDate = (dateOfBirth) => {
-    const date = new Date(dateOfBirth);
-    return date;
-  };
-  const formatDate = (date) => {
-    const formattedDate = date.toLocaleDateString("en-us", {
+
+  const formatDate = ({ dateOfBirth }) => {
+    const dateFormatted = dateOfBirth.toLocaleDateString("en-us", {
       year: "numeric",
       month: "short",
       day: "numeric",
     });
-    return formattedDate;
+    return dateFormatted;
   };
 
   return (
     <>
       {people.map((person) => {
         const { id, name, dateOfBirth, image } = person;
-        const age = getAge(stringToDate(dateOfBirth));
-        const formattedDateOfBirth = formatDate(stringToDate(dateOfBirth));
+        console.log(getAge(dateOfBirth));
         return (
           <article key={id} className="person">
             <img src={image} alt={name} />
             <div>
               <h4>{name}</h4>
               <p>
-                {formattedDateOfBirth} - {age} years
+                {formatDate(dateOfBirth)}- {getAge(dateOfBirth)} years
               </p>
             </div>
           </article>
